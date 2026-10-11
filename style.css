@@ -1,0 +1,330 @@
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --nav-bg: #ffffff;
+    --primary-color: #0056b3;
+    --border-color: #dddddd;
+    --shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --nav-bg: #1a1a1a;
+    --primary-color: #4dabf7;
+    --border-color: #333333;
+    --shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.theme-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--card-bg);
+}
+
+section {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.subtitle {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.about-image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    font-weight: 500;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h3 {
+    margin-bottom: 0.3rem;
+    color: var(--primary-color);
+}
+
+.project-subtitle {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+.btn-github {
+    align-self: flex-start;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.btn-github:hover {
+    opacity: 0.9;
+}
+
+.hobbies-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hobbies-list li {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+}
+
+.contact-section p {
+    margin-bottom: 1rem;
+}
+
+.contact-links p {
+    margin: 0.5rem 0;
+}
+
+.contact-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    align-items: start;
+}
+
+.contact-form {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: opacity 0.2s;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+.form-status {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.form-status.success {
+    color: #2b8a3e;
+}
+
+.form-status.error {
+    color: #c92a2a;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
