@@ -1,0 +1,1 @@
+An authentic, fully responsive personal portfolio website built entirely from scratch without any frameworks, templates, or UI libraries (such as Bootstrap or Tailwind). Developed as part of the 42 Amman curriculum, this project showcases my professional background, technical skills, projects, hobbies, and contact details with modern design and interactive elements.
